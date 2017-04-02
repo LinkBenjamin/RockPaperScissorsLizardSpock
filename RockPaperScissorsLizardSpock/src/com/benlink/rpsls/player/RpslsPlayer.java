@@ -39,6 +39,11 @@ public class RpslsPlayer implements RpslsPlayerInterface{
 		this.keyboard = keyboard;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.benlink.rpsls.player.RpslsPlayerInterface#choose()
+	 * 
+	 * choose a valid value from the enum.
+	 */
 	@Override
 	public Rpsls choose() {
 		boolean valid = false;

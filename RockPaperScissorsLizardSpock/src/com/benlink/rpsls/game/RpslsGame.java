@@ -9,7 +9,13 @@ public class RpslsGame {
 	
 	public final int PLAY_TO_POINTS = 5;
 	
-	// The result of playing the game is that we return the winner
+
+	/**
+	 * How we play a game.  A game is a series of rounds that get one player's
+	 * score to PLAY_TO_POINTS.
+	 * 
+	 * @return the player object who won the whole game
+	 */
 	public RpslsPlayer playGame(){
 		
 		do{
@@ -39,15 +45,27 @@ public class RpslsGame {
 		}		
 	}
 	
+	/**
+	 * @return player 1.  duh.
+	 */
 	public RpslsPlayer getPlayer1() {
 		return player1;
 	}
+	/**
+	 * @param player1 player 1.  duh.
+	 */
 	public void setPlayer1(RpslsPlayer player1) {
 		this.player1 = player1;
 	}
+	/**
+	 * @return player 2.  duh.
+	 */
 	public RpslsPlayer getPlayer2() {
 		return player2;
 	}
+	/**
+	 * @param player2 player 2. duh.
+	 */
 	public void setPlayer2(RpslsPlayer player2) {
 		this.player2 = player2;
 	}

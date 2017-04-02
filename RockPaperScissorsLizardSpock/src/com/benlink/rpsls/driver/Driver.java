@@ -8,9 +8,20 @@ import com.benlink.rpsls.game.RpslsGame;
 import com.benlink.rpsls.player.RpslsComputerPlayer;
 import com.benlink.rpsls.player.RpslsPlayer;
 
+/**
+ * Drivers gonna drive
+ * 
+ * @author Ben Link
+ *
+ */
 public class Driver {
 	public static final String[] NAMES = {"Sheldon", "Leonard", "Raj", "Howard", "Penny"};
 
+    /**
+     * As in, the whole Spanish Main, savvy?
+     * 
+     * @param args You know.  Arrrgs.
+     */
     public static void main(String[] args) {
     	
     	// Initialize stuffs
@@ -55,6 +66,13 @@ public class Driver {
     	keyboard.close();
     }
 
+	/**
+	 * Arr, this be a way to meet a new Computerized player.
+	 * He randomly picks his name from the list.
+	 * 
+	 * @param keyboard Unused, but passed in anyway for completeness' sake
+	 * @return The new player.
+	 */
 	private static RpslsPlayer meetComputer(Scanner keyboard) {
 		int randomNumber = (int) (Math.random() * NAMES.length);
 		
@@ -66,6 +84,12 @@ public class Driver {
 		return player;
 	}
 
+	/**
+	 * Avast, this be how ye meet a new landlubber!
+	 * 
+	 * @param keyboard Here be how he tells ye his name
+	 * @return The player object
+	 */
 	private static RpslsPlayer meetHuman(Scanner keyboard) {
 		RpslsPlayer player = new RpslsPlayer();
 		
@@ -75,6 +99,13 @@ public class Driver {
 		return player;
 	}
 
+	/**
+	 * Ask a question.  Get a yes or a no for an answer
+	 * 
+	 * @param prompt 
+	 * @param keyboard
+	 * @return yes or no = true or false
+	 */
 	private static boolean askUserBoolean(String prompt, Scanner keyboard) {
 		boolean valid = false;
 		boolean returnValue = false;
@@ -102,6 +133,14 @@ public class Driver {
 		return returnValue;
 	}
 
+	/**
+	 * Ask for a choice, send a list of possible responses, get back a number.  
+	 * 
+	 * @param prompt
+	 * @param values
+	 * @param keyboard
+	 * @return the choice
+	 */
 	private static int askUserNumeric(String prompt, List<String> values, Scanner keyboard){
 		boolean valid = false;
 		int returnValue = 0;
@@ -133,6 +172,13 @@ public class Driver {
 		return returnValue;
 	}
 	
+	/**
+	 * Ask a user for a string of text, and he'll give it to ye
+	 * 
+	 * @param prompt
+	 * @param keyboard
+	 * @return the string
+	 */
 	private static String askUserString(String prompt, Scanner keyboard){
 		System.out.print(prompt);
 		return keyboard.next();
