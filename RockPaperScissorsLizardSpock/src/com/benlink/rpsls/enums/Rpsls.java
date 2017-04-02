@@ -32,11 +32,12 @@ public enum Rpsls {
     }
     
     /**
-     * CompareTo
+     * CompareTo:  if a beats b, return 1.  if b beats a, return -1.
+     * If they tie, return 0.
      * 
-     * @param a
-     * @param b
-     * @return
+     * @param a choice of first player
+     * @param b choice of second player
+     * @return result as described above
      */
     public static int compareTo(Rpsls a, Rpsls b){
         //if a beats b, return 1
